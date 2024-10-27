@@ -2,7 +2,7 @@ name: Refresh
 on:
   # performed every two hours
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "0 0/2 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -28,8 +28,8 @@ env:
 
 jobs:
   process:
-    #runs-on: ubuntu-latest
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    # runs-on: macos-latest
 
     steps:
       - name: Checkout
